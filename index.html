@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of a First-Principles Engineer. Rust, Algorithms, and Elegant Code.">
+    <title>Peter Galiba | Engineer</title>
+
+    <style>
+        :root {
+            --bg: #111;
+            --fg: #eee;
+            --accent: #0f0;   /* Terminal Green */
+            --muted: #888;
+
+            --font-main: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'Menlo', 'Consolas', 'Monaco', monospace;
+            --max-width: 70ch;
+            --spacing: 1.5rem;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            padding: var(--spacing);
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-mono);
+            text-transform: uppercase;
+            letter-spacing: -0.05rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--fg);
+        }
+        h1 { font-size: 2.5rem; }
+
+        article {
+            border: 1px solid #333;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            background: #161616;
+        }
+
+        article h3 {
+            border-bottom: 1px dashed #333;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Ensures tags align nicely */
+        }
+
+        p { margin-bottom: 1.5rem; }
+
+        a { color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent); }
+        a:hover { background-color: var(--accent); color: var(--bg); border-bottom: none; }
+
+        /* Disabled link style */
+        a.disabled { color: var(--muted); border-bottom: 1px dashed var(--muted); pointer-events: none; }
+
+        code { font-family: var(--font-mono); background: #222; padding: 0.2rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
+
+        header { margin-bottom: 3rem; border-bottom: 1px solid #333; padding-bottom: 1rem; }
+        nav ul { display: flex; gap: 1rem; list-style: none; }
+
+        section { margin-bottom: 4rem; }
+
+        .tag {
+            font-size: 0.7em;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 0.1rem 0.4rem;
+            vertical-align: middle;
+            margin-left: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#projects">Projects</a></li>
+                </ul>
+        </nav>
+        <h1 style="margin-top: 2rem;">Peter Galiba</h1>
+        <p class="intro">
+            First-Principles Engineer. Rust & Systems Focus. <br>
+            Building elegant systems without the black box.
+        </p>
+    </header>
+
+    <main>
+        <section id="projects">
+            <h2>Selected Works</h2>
+
+            <article>
+                <h3>
+                    Voxel Engine Experiment
+                    <span class="tag">Rust / WGPU</span>
+                </h3>
+                <p>
+                    A research project exploring the WebGPU ecosystem via the <code>wgpu</code> crate.
+                    Built from a blank canvas to understand the modern graphics pipeline.
+                </p>
+                <ul style="margin-bottom: 1rem; padding-left: 1.2rem; font-size: 0.95em; color: var(--fg);">
+                    <li><strong>Graphics:</strong> Custom pipeline with <code>Nearest</code> neighbor sampling for crisp, artifact-free voxel rendering.</li>
+                    <li><strong>Scope:</strong> 122kB of Rust code handling mesh generation and world state.</li>
+                    <li><strong>Roadmap:</strong> Migrating to Texture Arrays to simplify UV mathematics and support complex mipmapping.</li>
+                </ul>
+                <a href="https://github.com/PeterTiny1/minecraft" target="_blank">View Source &rarr;</a>
+            </article>
+
+            <article>
+                <h3>
+                    Brainfuck Compiler
+                    <span class="tag">C / LLVM-C</span>
+                </h3>
+                <p>
+                    A minimalist compiler for the esoteric Brainfuck language, targeting the LLVM Intermediate Representation.
+                </p>
+                <ul style="margin-bottom: 1rem; padding-left: 1.2rem; font-size: 0.95em; color: var(--fg);">
+                    <li><strong>Core:</strong> Direct C bindings to the LLVM infrastructure.</li>
+                    <li><strong>Outcome:</strong> Learned IR generation, optimization passes, and low-level memory layout.</li>
+                </ul>
+                <a href="https://github.com/PeterTiny1" target="_blank">View GitHub Profile &rarr;</a>
+            </article>
+
+            <article>
+                <h3>
+                    Project Euler & Algorithms
+                    <span class="tag">Rust / Math</span>
+                </h3>
+                <p>
+                    Ongoing distinct mathematical problem solving.
+                </p>
+                <ul style="margin-bottom: 1rem; padding-left: 1.2rem; font-size: 0.95em; color: var(--fg);">
+                    <li><strong>Stats:</strong> 100 Problems Solved (Top tier complexity).</li>
+                    <li><strong>Focus:</strong> Optimized Rust solutions emphasizing memory efficiency and Big O notation.</li>
+                    <li><strong>Current Research:</strong> <code>O(n^2)</code> DSP-based music transition logic (Medley Generator).</li>
+                </ul>
+                <a href="https://projecteuler.net/progress=PeterTiny1" target="_blank">View Progress &rarr;</a>
+            </article>
+
+        </section>
+    </main>
+
+</body>
+</html>
